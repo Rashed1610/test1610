@@ -38,15 +38,15 @@ class HomeController extends Controller
         {
           $photo_name = $photo->photo;
           $photo_id = $photo->id;
-          //dd($photo_name);
-          // $photo_url = Storage::disk('dropbox')
-          // ->getDriver() // `\League\Flysystem\Flysystem` instance
-          // ->getAdapter() // `\Spatie\FlysystemDropbox\DropboxAdapter` instance
-          // ->getClient() // `\Spatie\Dropbox\Client` instance
-          // ->getTemporaryLink('Apps/Demo1610/'.$photo_name);
-          // //dd($photo_url);
-          //  return view('home',compact('photo_url','photo_id'));
-          return view('home');
+          dd($photo_name);
+          $photo_url = Storage::disk('dropbox')
+          ->getDriver() // `\League\Flysystem\Flysystem` instance
+          ->getAdapter() // `\Spatie\FlysystemDropbox\DropboxAdapter` instance
+          ->getClient() // `\Spatie\Dropbox\Client` instance
+          ->getTemporaryLink('Apps/Demo1610/'.$photo_name);
+          //dd($photo_url);
+           return view('home',compact('photo_url','photo_id'));
+          //return view('home');
         }
 
      }
