@@ -38,7 +38,7 @@ class HomeController extends Controller
         {
           $photo_name = $photo->photo;
           $photo_id = $photo->id;
-          dd($photo_name);
+          //dd($photo_name);
           $photo_url = Storage::disk('dropbox')
           ->getDriver() // `\League\Flysystem\Flysystem` instance
           ->getAdapter() // `\Spatie\FlysystemDropbox\DropboxAdapter` instance
