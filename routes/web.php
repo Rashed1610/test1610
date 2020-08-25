@@ -21,3 +21,6 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::post('/home_post', 'HomeController@upload')->name('upload');
+Route::get('/update/{id}','HomeController@update')->name('update');
+Route::post('/update_post','HomeController@update_post')->name('update_post');
+Route::get('/delete/{id}','HomeController@delete')->name('delete');

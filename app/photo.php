@@ -9,7 +9,7 @@ class photo extends Model
     protected $table = 'photo';
     public $timestamps = false;
      protected $fillable = [
-            'photo',
+            'user_id','photo',
         ];
 
 }
